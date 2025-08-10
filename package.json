@@ -1,0 +1,21 @@
+{
+  "name": "motivational-quotes-site",
+  "version": "1.0.0",
+  "description": "A simple Node.js site that displays random motivational quotes in yellow.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "quotes",
+    "motivation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  }
+}
