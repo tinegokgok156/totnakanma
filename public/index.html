@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motivational Quotes</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="quote" class="quote">Loading...</div>
+    <div class="subheading">—keep fighting</div>
+  </div>
+
+  <script>
+    async function fetchQuote() {
+      try {
+        const res = await fetch('/random-quote');
+        const data = await res.json();
+        document.getElementById('quote').textContent = data.quote || 'Stay motivated!';
+      } catch (err) {
+        document.getElementById('quote').textContent = 'Could not load quote.';
+      }
+    }
+    fetchQuote();
+  </script>
+</body>
+</html>
